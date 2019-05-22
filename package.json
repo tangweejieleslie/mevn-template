@@ -3,13 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "vue-serve": "vue-cli-service serve",
+    "vue-build": "vue-cli-service build",
+    "vue-lint": "vue-cli-service lint",
+    "dev:vue": "vue-cli-service serve",
+    "dev:express": "nodemon ./server/index.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.19.0",
     "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "cors": "^2.8.5",
+    "express": "^4.17.0",
+    "mongoose": "^5.5.10",
+    "nodemon": "^1.19.0",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.7.0",

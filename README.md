@@ -7,12 +7,14 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+Run the following in two terminals:
+- npm run dev:vue
+- npm run dev:express
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+npm run vue-build
 ```
 
 ### Run your tests
