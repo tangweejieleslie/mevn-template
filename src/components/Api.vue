@@ -41,7 +41,7 @@ export default {
                 runesList: [{runeset: "Violent", main: {stat: "HP%", value: 63}}],
                 comments: 'testing for fun'
             },
-            dataFromMongo: 'nodata',
+            dataFromMongo: [],
             updateFlag: 0
         }
     },
@@ -97,8 +97,8 @@ export default {
             this.dataFromMongo = mongoData;
         }
     },
-    beforeUpdate(){
-        console.log("New updates");
+    mounted(){
+        this.get();
     }
 }
  
