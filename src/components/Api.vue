@@ -30,8 +30,10 @@ export default {
 /*
     Defines the data used by the component
 */
+    name: "API",
     data(){
         return {
+            
             file: '',
             dataObject: {
                 userId: 'default id',
@@ -70,10 +72,9 @@ export default {
         },
         get(){
             console.log(this.dataFromMongo);
-            axios.get('http://localhost:4000/api/get', {
-                
-            })
-            .then(function (response) {
+
+            axios.get('http://localhost:4000/api/get')
+            .then((response) => {
                 console.log(response.data);
                 const responseSize = response.data.length;
                 let tempArray = [];
@@ -83,6 +84,7 @@ export default {
                 }
 
                 localStorage.data = JSON.stringify(tempArray);
+                this.dataFromMongo = response.data;
             })
             .catch(function (error) {
                 console.log(error);
