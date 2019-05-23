@@ -18,7 +18,8 @@
     "mongoose": "^5.5.10",
     "nodemon": "^1.19.0",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.6"
+    "vue-router": "^3.0.6",
+    "vuelidate": "^0.7.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.7.0",

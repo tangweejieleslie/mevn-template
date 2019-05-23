@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/get', async (req, res) => {
     const posts = await loadPostsCollection();
     res.send(await posts.find({}).toArray());
-    console.log("Get");
+    // console.log("Get");
 });
 
 // Add Post
@@ -18,7 +18,8 @@ router.post('/post', async (req, res) => {
         dataObject: req.body.dataObject, // insert entire JSON object 
         createdAt: new Date()
     });
-    console.log("Posting...");
+    console.log(req.body.dataObject)
+    // console.log("Posting...");
     res.status(201).send();
 });
 
